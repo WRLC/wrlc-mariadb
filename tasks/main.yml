@@ -1,0 +1,14 @@
+---
+# tasks/main.yml
+- name: update apt if older than 24hrs
+  apt:
+    name: mariadb-server
+    state: latest
+    update_cache: yes
+    cache_valid_time: 86400
+
+- name: install 50-server.cnf file
+  template:
+    src: 50-server.cnf.j2
+    dest: /etc/mysql/mariadb.conf.d/50-server.cnf
+  notify: restart mariadb
