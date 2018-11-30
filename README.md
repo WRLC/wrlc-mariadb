@@ -17,6 +17,7 @@ Role Variables
 | mariadb_thread_cache_size | '8' | |
 | mariadb_query_cache_limit | '1M' | |
 | mariadb_query_cache_size | '16M' | |
+| mariadb_root_password | none | mariadb root password set this in your host vars|
 
 Dependencies
 ------------
