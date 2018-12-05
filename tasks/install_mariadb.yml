@@ -7,9 +7,9 @@
     update_cache: yes
     cache_valid_time: 86400
 
-- name: install python-mysqldb
+- name: install python3-mysqldb
   apt:
-    name: python-mysqldb
+    name: python3-mysqldb
     state: latest
     update_cache: yes
     cache_valid_time: 86400
